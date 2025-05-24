@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic WiFi QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>📶 Wifi QR Code Generator</h2>
+
+        <label for="ssid">WiFi Name (SSID):</label>
+        <input type="text" id="ssid" placeholder="e.g. HomeNetwork">
+
+        <label for="password">Password: </label>
+        <input type="text" id="password" placeholder="e.g. mypassword123">
+
+        <label for="encryption">Encryption Type:</label>
+        <select id="encryption">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">None (Open)</option>
+        </select>
+
+        <div id="qrcode">
+            <div class="footer"> Scan with your phone to connect automatically </div>
+        </div>
+
+    </div>  
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
